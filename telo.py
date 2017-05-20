@@ -1,5 +1,5 @@
 import time
-from ranodom import randint
+from random import randint
 
 import RPi.GPIO as GPIO
 
