@@ -1,2 +1,9 @@
 *.sublime-project
 *.sublime-workspace
+.asset-cache
+.sass-cache
+.jekyll-metadata
+__pycache__
+/node_modules
+/public
+/venv
