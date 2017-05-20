@@ -1,4 +1,5 @@
 import time
+import requests
 from random import randint
 
 import RPi.GPIO as GPIO
@@ -72,7 +73,9 @@ class Car(object):
 try:
     pp3 = Car(Wheel(11, 12), Wheel(15, 16))
     for i in range(100):
-        pp3.move(randint(0, 4))
+        r = requests.get("http://pp3.tech/server/direction")
+        n = int(r.text)
+        pp3.move(n)
         time.sleep(1)
 finally:
     GPIO.cleanup()
