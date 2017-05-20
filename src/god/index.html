@@ -1,0 +1,40 @@
+---
+layout: page
+---
+
+<section class="section">
+  <div class="container">
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical">
+        <div class="tile">
+          <div class="tile is-parent is-vertical is-hidden-mobile">
+            <article class="tile is-child notification is-info">
+              <p class="title">Vertical...</p>
+              <p class="subtitle">Top tile</p>
+            </article>
+            <article class="tile is-child notification is-info">
+              <p class="title">...tiles</p>
+              <p class="subtitle">Bottom tile</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-info has-text-centered">
+              <canvas id="joystick" height="200" width="200"></canvas>
+              <p id="valSpeed" class="light">speed: </p>
+              <p id="valAngle" class="light">direction: </p>
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent is-hidden-mobile">
+          <article class="tile is-child notification is-info has-text-centered">
+            <div class="content">
+              <a class="button is-info is-inverted is-active" id="mode-single">Single Player</a>
+              <a class="button is-info is-inverted is-outlined" id="mode-democracy">Democracy</a>
+              <a class="button is-info is-inverted is-outlined" id="mode-anarchy">Anarchy</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
