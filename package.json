@@ -1,0 +1,11 @@
+{
+  "name": "pp3",
+  "version": "1.0.0",
+  "repository": "MKolman/DragonHack-2017",
+  "author": "Tadej Novak <tadej@tano.si>",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.4.1",
+    "jquery": "^3.2.1"
+  }
+}

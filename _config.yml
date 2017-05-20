@@ -1,0 +1,33 @@
+# Site settings
+title: PP3
+email: tadej@tano.si
+description:
+baseurl: ""
+url: "http://pp3.tech"
+
+# Build settings
+production: false
+incremental: true
+source: src
+destination: public
+markdown: kramdown
+gems:
+  - jekyll-assets
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+assets:
+  cache: .asset-cache
+  compress:
+    css: true
+    js: true
+  features:
+    automatic_img_alt: false
+    automatic_img_size: false
+  sources:
+    - _assets/images
+    - _assets/scripts
+    - _assets/sass
+    - node_modules
