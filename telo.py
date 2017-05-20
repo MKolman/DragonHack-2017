@@ -69,7 +69,10 @@ class Car(object):
         self.right.backw()
 
 
-pp3 = Car(Wheel(11, 12), Wheel(15, 16))
-for i in range(100):
-    pp3.move(randint(0, 4))
-    time.sleep(1)
+try:
+    pp3 = Car(Wheel(11, 12), Wheel(15, 16))
+    for i in range(100):
+        pp3.move(randint(0, 4))
+        time.sleep(1)
+finally:
+    GPIO.cleanup()
