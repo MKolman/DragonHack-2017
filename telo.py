@@ -20,15 +20,15 @@ class Wheel(object):
 
     def forw(self):
         GPIO.output(self.front, True)
-        GPIO.output(self.backw, False)
+        GPIO.output(self.back, False)
 
     def backw(self):
         GPIO.output(self.front, False)
-        GPIO.output(self.backw, True)
+        GPIO.output(self.back, True)
 
     def stop(self):
         GPIO.output(self.front, False)
-        GPIO.output(self.backw, False)
+        GPIO.output(self.back, False)
 
 
 class Car(object):
