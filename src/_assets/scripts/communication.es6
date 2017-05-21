@@ -37,6 +37,9 @@ const Communication = {
         let movement = JSON.parse(e.data.replace('movement: ', ''));
         $('#current-speed').text('current speed: ' + movement.speed);
         $('#current-angle').text('current direction: ' + movement.angle);
+      } else if (e.data.startsWith('participants: ')) {
+        let participants = JSON.parse(e.data.replace('participants: ', ''));
+        Plot.stats(participants);
       }
     };
   }

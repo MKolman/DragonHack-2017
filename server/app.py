@@ -120,6 +120,10 @@ def movement():
         msg = "movement: " + json.dumps(global_movement)
         for sub in subscriptions[:]:
             sub.put(msg)
+            if global_mode != "single":
+                sub.put("participants: " + json.dumps(list(global_movement_multi.values())))
+            else:
+                sub.put("participants: " + json.dumps([global_movement]))
 
     spawn(notify)
 

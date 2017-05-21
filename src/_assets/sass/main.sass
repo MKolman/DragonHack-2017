@@ -3,9 +3,13 @@
 body,
 html
   min-height: 100%
-  overflow-y: hidden
-  position: fixed
-  width: 100%
+
+@media all and (max-width: 768px)
+  body,
+  html
+    overflow-y: hidden
+    position: fixed
+    width: 100%
 
 body,
 html,
