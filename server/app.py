@@ -139,6 +139,10 @@ def subscribe():
             sub.put("global_id: " + str(sub.global_id))
             sub.put(msg1)
             sub.put(msg2)
+            if global_mode != "single":
+                sub.put("participants: " + json.dumps(list(global_movement_multi.values())))
+            else:
+                sub.put("participants: " + json.dumps([global_movement]))
 
     def gen():
         global subscription_global_id
