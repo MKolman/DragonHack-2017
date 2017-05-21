@@ -2,40 +2,6 @@
 layout: page
 ---
 
-<section class="section">
-  <div class="container">
-    <div class="tile is-ancestor">
-      <div class="tile is-vertical">
-        <div class="tile">
-          <div class="tile is-parent is-vertical is-hidden-mobile">
-            <article class="tile is-child notification is-info">
+<script>var GlobalName = "GOD";</script>
 
-            </article>
-            <article class="tile is-child notification is-info">
-              <p id="current-spectators" class="light">spectators: </p>
-              <p id="current-mode" class="light">mode: </p>
-              <p id="current-speed" class="light">current speed: 0</p>
-              <p id="current-angle" class="light">current direction: 0</p>
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-info has-text-centered">
-              <canvas id="joystick" height="200" width="200"></canvas>
-              <p id="valSpeed" class="light">speed: 0</p>
-              <p id="valAngle" class="light">direction: 0</p>
-            </article>
-          </div>
-        </div>
-        <div class="tile is-parent is-hidden-mobile">
-          <article class="tile is-child notification is-info has-text-centered">
-            <div id="mode-list" class="content">
-              <a class="button is-info is-inverted is-active" id="mode-single">Single Player</a>
-              <a class="button is-info is-inverted is-outlined" id="mode-democracy">Democracy</a>
-              <a class="button is-info is-inverted is-outlined" id="mode-anarchy">Anarchy</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% include pp3.html %}

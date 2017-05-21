@@ -17,6 +17,19 @@ const Communication = {
         modes.find('.button').removeClass('is-active').addClass('is-outlined');
         modes.find('#mode-' + mode).addClass('is-active').removeClass('is-outlined');
         $('#current-mode').text('mode: ' + pretty_mode);
+
+        if (GlobalName == "GOD") {
+          $('#joystick-placeholder').hide();
+          $('#joystick-container').show();
+        } else {
+          if (mode == 'single') {
+            $('#joystick-placeholder').show();
+            $('#joystick-container').hide();
+          } else {
+            $('#joystick-placeholder').hide();
+            $('#joystick-container').show();
+          }
+        }
       } else if (e.data.startsWith('subscriptions: ')) {
         let subscriptions = Number(e.data.replace('subscriptions: ', ''));
         $('#current-spectators').text('subscriptions: ' + subscriptions);

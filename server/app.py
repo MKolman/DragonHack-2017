@@ -75,7 +75,7 @@ def direction():
 
         spawn(notify)
 
-    return str(global_movement["speed"]) + " " + str(global_movement["angle"])
+    return str(int(global_movement["speed"])) + " " + str(int(global_movement["angle"]))
 
 @app.route("/mode")
 @crossdomain(origin='*')
