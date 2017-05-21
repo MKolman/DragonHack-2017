@@ -1,7 +1,9 @@
 //= require communication
+//= require actions
 //= require joystick
 
 $(document).ready(() => {
-  Communicaton.init();
+  Communication.init();
+  Actions.init();
   Joystick.init();
 });

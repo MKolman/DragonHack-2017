@@ -55,6 +55,8 @@ const Joystick = {
       $('#valSpeed').text('speed: ' + Math.round(coords.speed));
       $('#valAngle').text('direction: ' + Math.round(coords.angle));
 
+      Actions.updateMovement(Math.round(coords.speed), Math.round(coords.angle));
+
       psp.alpha = 0.5;
 
       stage.update();
@@ -66,6 +68,13 @@ const Joystick = {
         x: xCenter,
         y: yCenter
       }, 750, createjs.Ease.elasticOut);
+
+      var coords = Joystick.calculateCoords(ev.angle, ev.distance);
+
+      $('#valSpeed').text('speed: ' + Math.round(coords.speed));
+      $('#valAngle').text('direction: ' + Math.round(coords.angle));
+
+      Actions.updateMovement(Math.round(coords.speed), Math.round(coords.angle), true);
     });
   },
 

@@ -13,8 +13,10 @@ layout: page
               <p class="subtitle">Top tile</p>
             </article>
             <article class="tile is-child notification is-info">
-              <p class="title">...tiles</p>
-              <p class="subtitle">Bottom tile</p>
+              <p id="current-spectators" class="light">spectators: </p>
+              <p id="current-mode" class="light">mode: </p>
+              <p id="current-speed" class="light">current speed: </p>
+              <p id="current-angle" class="light">current direction: </p>
             </article>
           </div>
           <div class="tile is-parent">
@@ -27,7 +29,7 @@ layout: page
         </div>
         <div class="tile is-parent is-hidden-mobile">
           <article class="tile is-child notification is-info has-text-centered">
-            <div class="content">
+            <div id="mode-list" class="content">
               <a class="button is-info is-inverted is-active" id="mode-single">Single Player</a>
               <a class="button is-info is-inverted is-outlined" id="mode-democracy">Democracy</a>
               <a class="button is-info is-inverted is-outlined" id="mode-anarchy">Anarchy</a>
