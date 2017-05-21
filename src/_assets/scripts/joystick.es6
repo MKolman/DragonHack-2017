@@ -86,7 +86,7 @@ const Joystick = {
     coords.x = distance * Math.cos(rads);
     coords.y = distance * Math.sin(rads);
     coords.speed = distance;
-    coords.angle = angle;
+    coords.angle = angle < 0 ? angle + 360 : angle;
 
     return coords;
   }

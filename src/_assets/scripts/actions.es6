@@ -19,6 +19,6 @@ const Actions = {
 
     Actions.updateMovementLast = now;
 
-    $.get(Communication.endpoint + '/movement', { speed: speed, angle: angle });
+    $.get(Communication.endpoint + '/movement', { speed: speed, angle: angle, global_id: Communication.global_id });
   }
 };
