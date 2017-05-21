@@ -6,6 +6,8 @@
 $(document).ready(() => {
   if (GlobalName != "USER") {
     $('#select-mode').show();
+  } else {
+    $('#joystick-video').remove();
   }
 
   Communication.init();
