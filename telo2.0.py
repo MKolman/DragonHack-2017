@@ -4,6 +4,7 @@ from random import randint
 
 import RPi.GPIO as GPIO
 
+from kot_conversion import convert
 GPIO.setmode(GPIO.BOARD)
 
 PWM_FREQ = 512
@@ -47,16 +48,16 @@ class Car(object):
         self.left.go(left)
         self.right.go(right)
 
+
 try:
-    pp3 = Car(Wheel(LEFT_FORWARD_PIN, LEFT_BACKWARD_PIN), Wheel(RIGHT_FORWARD_PIN, RIGHT_BACKWARD_PIN))
-    for i in range(-100, 101, 10):
-        #r = requests.get("http://pp3.tech/server/direction
-        #tmp = r.text.strip().split()
-        #left, right = map(int, tmp)
-        right = 0
-        left = i
-        print(i)
+    pp3 = Car(Wheel(LEFT_FORWARD_PIN, LEFT_BACKWARD_PIN),
+              Wheel(RIGHT_FORWARD_PIN, RIGHT_BACKWARD_PIN))
+    while True:
+        r = requests.get("http://193.2.179.248:5000/direction")
+        # tmp = r.text.strip().split()
+        r, deg = map(int, r.text.split())
+        left, right = convert(deg, r)
         pp3.move(left, right)
-        time.sleep(1)
+        time.sleep(0.25)
 finally:
     GPIO.cleanup()
